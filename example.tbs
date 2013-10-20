@@ -1,0 +1,33 @@
+#
+#	Comments
+#
+
+tbs.type = executable
+		# lib
+		# sharedlib
+		# none
+
+tbs.compiler = clang++
+		# just a shell command to run
+
+tbs.flags += -Wall -std=c++11
+tbs.outdir = ./build
+
+tbs.depends = utils/utils.tbs
+		# utils/utils.tbs:target
+
+tbs.files += main.cpp
+
+tbs.default = release
+
+[tbs.config.release]
+
+	tbs.flags += -O3
+
+[tbs.config.debug]
+	
+	tbs.flags += -g
+
+[release]
+
+	tbs.config += release

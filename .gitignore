@@ -1,0 +1,9 @@
+# Editors
+*~
+*.sw*
+
+# Generated
+*.o
+*.so
+*.a
+*.bin
